@@ -1,0 +1,45 @@
+<!-- views/registration.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles.css">
+  <title>Registration Page</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Registration Page</h1>
+    <form action="/register" method="post">
+      <label for="firstname">First Name:</label>
+      <input type="text" id="firstname" name="firstname" required>
+
+      <label for="lastname">Last Name:</label>
+      <input type="text" id="lastname" name="lastname" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mobileno">Mobile No:</label>
+      <input type="number" name="mobileno" id="mobileno" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirmpassword">Confirm Password:</label>
+      <input type="password" id="confirmpassword" name="confirmpassword" required>
+
+      <div class="forgot-password">
+        <a href="#">Forgot Password?</a>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+ 
+    <div class="sign-in-link">
+      <p>Already have an account? <a href="/">Sign In</a></p>
+    </div>
+  </div>
+
+</body>
+</html>

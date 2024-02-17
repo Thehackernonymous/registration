@@ -1,4 +1,3 @@
-// app.js
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
@@ -31,14 +30,10 @@ app.get('/', (req, res) => {
   res.render('registration');
 });
 
-app.get('/register', (req, res) => {
-  res.render('registrationpage', { user: req.user });
-});
-
 app.post('/register', async (req, res) => {
   try {
-    const { username, email, password } = req.body;
-    const newUser = new User({ username, email, password });
+    const { firstname, lastname, email, mobileno, password, confirmpassword } = req.body;
+    const newUser = new User({ firstname, lastname, email, mobileno, password, confirmpassword });
     await newUser.save();
     res.render('registrationpage', { user: newUser });
   } catch (error) {
